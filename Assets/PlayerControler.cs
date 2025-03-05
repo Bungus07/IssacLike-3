@@ -9,9 +9,11 @@ public class PlayerController : MonoBehaviour
     private Vector2 moveInput;
     private Vector2 ShootInput;
     private Animator animatorshoot;
+    private Animator AnimatorMove;
 
     void Start()
     {
+        AnimatorMove = gameObject.transform.GetChild(1).gameObject.GetComponent<Animator>();
         animatorshoot = gameObject.transform.GetChild(0).gameObject.GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
     }
@@ -26,11 +28,14 @@ public class PlayerController : MonoBehaviour
         ShootInput.y = Input.GetAxisRaw("Vertical2");
         animatorshoot.SetFloat("HozShoot", ShootInput.x);
         animatorshoot.SetFloat("VertShoot", ShootInput.y);
+        AnimatorMove.SetFloat("Hoz", moveInput.x);
+        AnimatorMove.SetFloat("Vert", moveInput.y);
     }
 
     void FixedUpdate()
     {
         // Apply movement to the Rigidbody2D
         rb.velocity = moveInput * moveSpeed;
+       
     }
 }

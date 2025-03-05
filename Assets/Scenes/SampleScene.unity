@@ -132,7 +132,8 @@ GameObject:
   m_Component:
   - component: {fileID: 208226038}
   - component: {fileID: 208226039}
-  m_Layer: 0
+  - component: {fileID: 208226040}
+  m_Layer: 7
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -206,6 +207,27 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &208226040
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 208226037}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 626bc8daf3b73cb44a428fef5d4deb94, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -310,7 +332,7 @@ GameObject:
   - component: {fileID: 1010801592}
   - component: {fileID: 1010801591}
   - component: {fileID: 1010801590}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -437,7 +459,8 @@ GameObject:
   - component: {fileID: 1452353393}
   - component: {fileID: 1452353395}
   - component: {fileID: 1452353394}
-  m_Layer: 0
+  - component: {fileID: 1452353396}
+  m_Layer: 7
   m_Name: Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -532,6 +555,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1452353396
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1452353392}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 573de1997a42455409f74027076d12ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Tear: {fileID: 5402900381247907325, guid: 4026216ba1958c64ab1cf5812f9f69dd, type: 3}
+  TearSpeed: 4
+  CooldownTime: 1
 --- !u!1 &1983451695
 GameObject:
   m_ObjectHideFlags: 0
