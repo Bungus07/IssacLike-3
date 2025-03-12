@@ -43,12 +43,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 66
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -108,7 +108,952 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Sacrifice_Room_1_0
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 584
+        width: 128
+        height: 137
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 363599fdee63cc94789d019839fbaa1a
+      internalID: 1205128121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sacrifice_Room_1_1
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 584
+        width: 128
+        height: 137
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86de487f75286b2418e583167ec3a3ee
+      internalID: 603565197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sacrifice_Room_1_2
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 584
+        width: 128
+        height: 137
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59151da6b78898d4b9e872bece510ec1
+      internalID: -592253495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sacrifice_Room_1_3
+      rect:
+        serializedVersion: 2
+        x: 409
+        y: 584
+        width: 128
+        height: 137
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73aeeeeb67a389847b2a09dd8d52933b
+      internalID: 1398246798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sacrifice_Room_1_4
+      rect:
+        serializedVersion: 2
+        x: 537
+        y: 584
+        width: 128
+        height: 137
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be9c3338a0ce11048aae7c3d5cf592f8
+      internalID: -1205768400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sacrifice_Room_1_5
+      rect:
+        serializedVersion: 2
+        x: 665
+        y: 584
+        width: 128
+        height: 137
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2114ac6153795704eaabe8eda9bf8026
+      internalID: -1914846141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sacrifice_Room_1_6
+      rect:
+        serializedVersion: 2
+        x: 793
+        y: 584
+        width: 128
+        height: 137
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aaa88e45f94ba1a42a0eb6790370a8a5
+      internalID: -1382448817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sacrifice_Room_1_7
+      rect:
+        serializedVersion: 2
+        x: 921
+        y: 584
+        width: 128
+        height: 137
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c82ac42dcbd51624c9bbc21d33c04266
+      internalID: -1083508545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sacrifice_Room_1_8
+      rect:
+        serializedVersion: 2
+        x: 1049
+        y: 584
+        width: 128
+        height: 137
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef5fccc2209609446a0fb7cb34ed7b2d
+      internalID: -1359901751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sacrifice_Room_1_9
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 447
+        width: 128
+        height: 137
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ccc58a6d87894a43911da4411bc34a8
+      internalID: 107289141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sacrifice_Room_1_10
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 447
+        width: 128
+        height: 137
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32b7697dcfe59a54c80acc3c6f28c40c
+      internalID: 1760780449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sacrifice_Room_1_11
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 447
+        width: 128
+        height: 137
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f69db4d8ba0d4c14084fc782439646a0
+      internalID: -1510368900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sacrifice_Room_1_12
+      rect:
+        serializedVersion: 2
+        x: 409
+        y: 447
+        width: 128
+        height: 137
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7aca8ae75abb4c48a01d98b8eca9b1a
+      internalID: -1769151224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sacrifice_Room_1_13
+      rect:
+        serializedVersion: 2
+        x: 537
+        y: 447
+        width: 128
+        height: 137
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9169ceb7c8652d449eb5c2a5ad54175
+      internalID: -321789905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sacrifice_Room_1_14
+      rect:
+        serializedVersion: 2
+        x: 665
+        y: 447
+        width: 128
+        height: 137
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 236ed25a3f585754e82ec281b2a7fed4
+      internalID: 1444008836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sacrifice_Room_1_15
+      rect:
+        serializedVersion: 2
+        x: 793
+        y: 447
+        width: 128
+        height: 137
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b5b91d6d6ddcb24e848918588179ef5
+      internalID: 182546307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sacrifice_Room_1_16
+      rect:
+        serializedVersion: 2
+        x: 921
+        y: 447
+        width: 128
+        height: 137
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05ce3368aebbe0249877fa76fdb6d53f
+      internalID: -787628128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sacrifice_Room_1_17
+      rect:
+        serializedVersion: 2
+        x: 1049
+        y: 447
+        width: 128
+        height: 137
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec7ab1ddec3e1b64484e19e6c5f231ce
+      internalID: 1113377904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sacrifice_Room_1_18
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 310
+        width: 128
+        height: 137
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e4b7ec897b0de942b20cc81ad7a598a
+      internalID: 269742501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sacrifice_Room_1_19
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 310
+        width: 128
+        height: 137
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 149256698b817ad40863c7f34d122cbf
+      internalID: 1943591017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sacrifice_Room_1_20
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 310
+        width: 128
+        height: 137
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3946305684fd5144ebc30b7ff04f52b5
+      internalID: 935363238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sacrifice_Room_1_21
+      rect:
+        serializedVersion: 2
+        x: 409
+        y: 310
+        width: 128
+        height: 137
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6449040e1470ebb4f8061f75dff2d07c
+      internalID: -1986643231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sacrifice_Room_1_22
+      rect:
+        serializedVersion: 2
+        x: 537
+        y: 310
+        width: 128
+        height: 137
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c22c6436d86ece4d9afaca19d97cb6e
+      internalID: 180970494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sacrifice_Room_1_23
+      rect:
+        serializedVersion: 2
+        x: 665
+        y: 310
+        width: 128
+        height: 137
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0791787a3e9ec0478a22951dfd9169c
+      internalID: -2118314557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sacrifice_Room_1_24
+      rect:
+        serializedVersion: 2
+        x: 793
+        y: 310
+        width: 128
+        height: 137
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27e0afcd57217cc498378ecb0675b850
+      internalID: 1444758546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sacrifice_Room_1_25
+      rect:
+        serializedVersion: 2
+        x: 921
+        y: 310
+        width: 128
+        height: 137
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e280ced31c470bb4082415471a2d9405
+      internalID: -270726514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sacrifice_Room_1_26
+      rect:
+        serializedVersion: 2
+        x: 1049
+        y: 310
+        width: 128
+        height: 137
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04c36af72e50e914196a979ac982c17d
+      internalID: -740990797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sacrifice_Room_1_27
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 173
+        width: 128
+        height: 137
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0dc7fe9c7e01834daceacd82ba88280
+      internalID: -562402819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sacrifice_Room_1_28
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 173
+        width: 128
+        height: 137
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4414c6fe7156b846bfee900197300bc
+      internalID: 890561165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sacrifice_Room_1_29
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 173
+        width: 128
+        height: 137
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c70b8a32c346824e95f9510cd380313
+      internalID: 1553097859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sacrifice_Room_1_30
+      rect:
+        serializedVersion: 2
+        x: 409
+        y: 173
+        width: 128
+        height: 137
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df7056e1ce71bed4bb8dc9c3ca3ac46e
+      internalID: -231653330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sacrifice_Room_1_31
+      rect:
+        serializedVersion: 2
+        x: 537
+        y: 173
+        width: 128
+        height: 137
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8033352bd2b238e4e9c63812f06d184c
+      internalID: 304021404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sacrifice_Room_1_32
+      rect:
+        serializedVersion: 2
+        x: 665
+        y: 173
+        width: 128
+        height: 137
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec08910426d80ce46a90db9ba580d3ea
+      internalID: 1581257568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sacrifice_Room_1_33
+      rect:
+        serializedVersion: 2
+        x: 793
+        y: 173
+        width: 128
+        height: 137
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a5c3c66e9ca4564e82287f2efb34eaf
+      internalID: 108647768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sacrifice_Room_1_34
+      rect:
+        serializedVersion: 2
+        x: 921
+        y: 173
+        width: 128
+        height: 137
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efd24066bb96b3a4bbf966c64255434f
+      internalID: -1851372354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sacrifice_Room_1_35
+      rect:
+        serializedVersion: 2
+        x: 1049
+        y: 173
+        width: 128
+        height: 137
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f3c0f969d89cfe4b81e7d600e7f0445
+      internalID: -1730650169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sacrifice_Room_1_36
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 36
+        width: 128
+        height: 137
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7eacd6cd14c9c5e48bbe2ba00d83074a
+      internalID: 1657069778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sacrifice_Room_1_37
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 36
+        width: 128
+        height: 137
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b89431aa375e5bb4da25045ccd384c47
+      internalID: -134772559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sacrifice_Room_1_38
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 36
+        width: 128
+        height: 137
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40d89097977f70746a87e6ee91ec6f2e
+      internalID: -540564966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sacrifice_Room_1_39
+      rect:
+        serializedVersion: 2
+        x: 409
+        y: 36
+        width: 128
+        height: 137
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d538e0833ad4df14ba8359ec9c939bae
+      internalID: -1487648148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sacrifice_Room_1_40
+      rect:
+        serializedVersion: 2
+        x: 537
+        y: 36
+        width: 128
+        height: 137
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23c4cbe2eeb83f547a159d5d3dda7111
+      internalID: 1915577412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sacrifice_Room_1_41
+      rect:
+        serializedVersion: 2
+        x: 665
+        y: 36
+        width: 128
+        height: 137
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54b7d1de162dd654b86f47600cf76c39
+      internalID: 1158072367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sacrifice_Room_1_42
+      rect:
+        serializedVersion: 2
+        x: 793
+        y: 36
+        width: 128
+        height: 137
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27d39ae2348d5684b8d827782c277e73
+      internalID: 433973028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sacrifice_Room_1_43
+      rect:
+        serializedVersion: 2
+        x: 921
+        y: 36
+        width: 128
+        height: 137
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 337c460b81269074da8c4ad52e6096cf
+      internalID: -860046604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sacrifice_Room_1_44
+      rect:
+        serializedVersion: 2
+        x: 1049
+        y: 36
+        width: 128
+        height: 137
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 187906df2f9cbb243b2fa60385beae30
+      internalID: -1799223400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -119,7 +1064,52 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Sacrifice_Room_1_0: 1205128121
+      Sacrifice_Room_1_1: 603565197
+      Sacrifice_Room_1_10: 1760780449
+      Sacrifice_Room_1_11: -1510368900
+      Sacrifice_Room_1_12: -1769151224
+      Sacrifice_Room_1_13: -321789905
+      Sacrifice_Room_1_14: 1444008836
+      Sacrifice_Room_1_15: 182546307
+      Sacrifice_Room_1_16: -787628128
+      Sacrifice_Room_1_17: 1113377904
+      Sacrifice_Room_1_18: 269742501
+      Sacrifice_Room_1_19: 1943591017
+      Sacrifice_Room_1_2: -592253495
+      Sacrifice_Room_1_20: 935363238
+      Sacrifice_Room_1_21: -1986643231
+      Sacrifice_Room_1_22: 180970494
+      Sacrifice_Room_1_23: -2118314557
+      Sacrifice_Room_1_24: 1444758546
+      Sacrifice_Room_1_25: -270726514
+      Sacrifice_Room_1_26: -740990797
+      Sacrifice_Room_1_27: -562402819
+      Sacrifice_Room_1_28: 890561165
+      Sacrifice_Room_1_29: 1553097859
+      Sacrifice_Room_1_3: 1398246798
+      Sacrifice_Room_1_30: -231653330
+      Sacrifice_Room_1_31: 304021404
+      Sacrifice_Room_1_32: 1581257568
+      Sacrifice_Room_1_33: 108647768
+      Sacrifice_Room_1_34: -1851372354
+      Sacrifice_Room_1_35: -1730650169
+      Sacrifice_Room_1_36: 1657069778
+      Sacrifice_Room_1_37: -134772559
+      Sacrifice_Room_1_38: -540564966
+      Sacrifice_Room_1_39: -1487648148
+      Sacrifice_Room_1_4: -1205768400
+      Sacrifice_Room_1_40: 1915577412
+      Sacrifice_Room_1_41: 1158072367
+      Sacrifice_Room_1_42: 433973028
+      Sacrifice_Room_1_43: -860046604
+      Sacrifice_Room_1_44: -1799223400
+      Sacrifice_Room_1_5: -1914846141
+      Sacrifice_Room_1_6: -1382448817
+      Sacrifice_Room_1_7: -1083508545
+      Sacrifice_Room_1_8: -1359901751
+      Sacrifice_Room_1_9: 107289141
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
