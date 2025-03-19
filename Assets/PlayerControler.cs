@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
@@ -10,6 +11,10 @@ public class PlayerController : MonoBehaviour
     private Vector2 ShootInput;
     private Animator animatorshoot;
     private Animator AnimatorMove;
+    public int PlayerHealth;
+    public float InvincibilityTimer;
+    public float InvincibilityTime;
+    private bool InvincibilityTimerActive;
 
     void Start()
     {
@@ -17,6 +22,31 @@ public class PlayerController : MonoBehaviour
         animatorshoot = gameObject.transform.GetChild(0).gameObject.GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
     }
+    void TakeDamage(int Damage)
+    {  
+        if (!InvincibilityTimerActive)
+        {
+            PlayerHealth -= Damage;
+            InvincibilityTimerActive = true;
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Enemy")
+        {
+            TakeDamage(collision.gameObject.GetComponent<EnemyScript>().Damage);
+        }
+    }
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        Debug.Log("PlayerIsStayingInTrigger");
+        if (collision.gameObject.tag == "Enemy")
+        {
+            TakeDamage(collision.gameObject.GetComponent<EnemyScript>().Damage);
+        }
+    }
+
 
     void Update()
     {
@@ -30,6 +60,20 @@ public class PlayerController : MonoBehaviour
         animatorshoot.SetFloat("VertShoot", ShootInput.y);
         AnimatorMove.SetFloat("Hoz", moveInput.x);
         AnimatorMove.SetFloat("Vert", moveInput.y);
+
+        if (InvincibilityTimerActive == true)
+        {
+            if (InvincibilityTimer <= InvincibilityTime)
+            {
+                InvincibilityTimer += Time.deltaTime;
+            }
+            else
+            {
+                InvincibilityTimer = 0;
+                InvincibilityTimerActive = false;
+            }
+
+        }
     }
 
     void FixedUpdate()

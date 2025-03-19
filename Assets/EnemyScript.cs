@@ -12,6 +12,8 @@ public class EnemyScript : MonoBehaviour
     private Rigidbody2D Rb;
     private NavMeshAgent Agent;
     private Animator BodyAnimator;
+    public float EnemyHealth;
+    public int Damage;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,6 +23,14 @@ public class EnemyScript : MonoBehaviour
         Agent.updateRotation = false;
         Agent.updateUpAxis = false;
         BodyAnimator = gameObject.transform.GetChild(1).gameObject.GetComponent<Animator>();
+    }
+    public void TakeDamage(int Amount)
+    {
+        EnemyHealth -= Amount;
+        if (EnemyHealth <= 0)
+        {
+            Destroy(gameObject);
+        }
     }
 
     // Update is called once per frame

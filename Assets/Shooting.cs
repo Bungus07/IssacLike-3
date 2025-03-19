@@ -8,10 +8,11 @@ public class Shooting : MonoBehaviour
     private float Hoz;
     private float Vert;
     public float TearSpeed;
-    private Vector2 ShootingPosition;
+    public Vector2 ShootingPosition;
     private bool CooldownIsActive;
     public float CooldownTime;
     private float CooldownTimer;
+    public GameObject TearPrefab;
     // Start is called before the first frame update
     void Start()
     {
@@ -28,7 +29,7 @@ public class Shooting : MonoBehaviour
             if (!CooldownIsActive)
             {
                 ShootingPosition = new Vector2(Hoz, -Vert);
-                Tear = Instantiate(Tear, gameObject.transform.position, Quaternion.identity);
+                Tear = Instantiate(TearPrefab, gameObject.transform.position, Quaternion.identity);
                 Tear.GetComponent<Rigidbody2D>().velocity = ShootingPosition * TearSpeed;
                 CooldownIsActive = true;
             }
