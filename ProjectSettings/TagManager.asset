@@ -8,6 +8,7 @@ TagManager:
   - Wall
   - Bomb
   - Door
+  - CameraPoint
   layers:
   - Default
   - TransparentFX

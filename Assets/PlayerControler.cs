@@ -39,7 +39,7 @@ public class PlayerController : MonoBehaviour
     }
     private void OnTriggerStay2D(Collider2D collision)
     {
-        Debug.Log("PlayerIsStayingInTrigger");
+        // Debug.Log("PlayerIsStayingInTrigger");
         if (collision.gameObject.tag == "Enemy")
         {
             TakeDamage(collision.gameObject.GetComponent<EnemyScript>().Damage);
