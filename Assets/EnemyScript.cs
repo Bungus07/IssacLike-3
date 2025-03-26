@@ -22,7 +22,7 @@ public class EnemyScript : MonoBehaviour
         Agent = GetComponent<NavMeshAgent>();
         Agent.updateRotation = false;
         Agent.updateUpAxis = false;
-        BodyAnimator = gameObject.transform.GetChild(1).gameObject.GetComponent<Animator>();
+        BodyAnimator = gameObject.GetComponent<Animator>();
     }
     public void TakeDamage(int Amount)
     {

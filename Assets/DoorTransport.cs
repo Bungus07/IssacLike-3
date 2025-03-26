@@ -6,6 +6,7 @@ public class Door : MonoBehaviour
     public Door linkedDoor; // The door this leads to
     private static bool isOnCooldown = false; // Shared cooldown to prevent re-entry
     private static Camera mainCamera; // Cache the main camera
+    [SerializeField] private bool DoorIsLeftOrDown;
 
     private void Awake()
     {
@@ -26,13 +27,20 @@ public class Door : MonoBehaviour
         if (linkedDoor != null)
         {
             isOnCooldown = true; // Start cooldown
+            if (!DoorIsLeftOrDown)
+            {
+                // Move the player slightly outside the linked door to prevent instant re-triggering
+                Vector2 exitPosition = (Vector2)linkedDoor.transform.position + (Vector2)linkedDoor.transform.right * 1.5f;
+                player.transform.position = exitPosition;
+            }
+            else
+            {
+                Vector2 exitPosition = (Vector2)linkedDoor.transform.position +- (Vector2)linkedDoor.transform.right * 1.5f;
+                player.transform.position = exitPosition;
+            }
 
-            // Move the player slightly outside the linked door to prevent instant re-triggering
-            Vector2 exitPosition = (Vector2)linkedDoor.transform.position + (Vector2)linkedDoor.transform.up * 1.5f;
-            player.transform.position = exitPosition;
-
-            // Move the camera to the new room
-            MoveCameraToRoom(linkedDoor.transform.position);
+                // Move the camera to the new room
+                MoveCameraToRoom(linkedDoor.transform.position);
 
             // Wait for 1 second before allowing teleportation again
             yield return new WaitForSeconds(1f);

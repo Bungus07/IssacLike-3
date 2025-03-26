@@ -14,12 +14,15 @@ public class PlayerController : MonoBehaviour
     public float InvincibilityTimer;
     public float InvincibilityTime;
     private bool InvincibilityTimerActive;
+    public GameObject CanvasMenu;
+    public GameObject Head;
 
     void Start()
     {
-        AnimatorMove = gameObject.transform.GetChild(1).gameObject.GetComponent<Animator>();
-        animatorshoot = gameObject.transform.GetChild(0).gameObject.GetComponent<Animator>();
+        AnimatorMove = gameObject.GetComponent<Animator>();
+        animatorshoot = gameObject.GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
+        Head.SetActive(true);
     }
     void TakeDamage(int Damage)
     {  
@@ -27,7 +30,19 @@ public class PlayerController : MonoBehaviour
         {
             PlayerHealth -= Damage;
             InvincibilityTimerActive = true;
+            if (PlayerHealth <= 0)
+            {
+                StartCoroutine(Death());
+            }
         }
+    }
+    IEnumerator Death()
+    {
+        AnimatorMove.SetBool("Dead", true);
+        Head.SetActive(false);
+        yield return new WaitForSeconds(0.3f);
+        Time.timeScale = 0;
+        CanvasMenu.GetComponent<Menu>().ShowRestartScreen();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
