@@ -43,7 +43,7 @@ public class Door : MonoBehaviour
                 MoveCameraToRoom(linkedDoor.transform.position);
 
             // Wait for 1 second before allowing teleportation again
-            yield return new WaitForSeconds(1f);
+            yield return new WaitForSeconds(0.5f);
 
             isOnCooldown = false; // Cooldown over
         }
