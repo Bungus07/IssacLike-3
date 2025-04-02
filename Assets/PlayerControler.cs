@@ -16,6 +16,8 @@ public class PlayerController : MonoBehaviour
     private bool InvincibilityTimerActive;
     public GameObject CanvasMenu;
     public GameObject Head;
+    private GameObject[] Enemies;
+    public int KeyCount = 0;
 
     void Start()
     {
@@ -23,6 +25,7 @@ public class PlayerController : MonoBehaviour
         animatorshoot = gameObject.GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
         Head.SetActive(true);
+        Enemies = GameObject.FindGameObjectsWithTag("Enemy");
     }
     void TakeDamage(int Damage)
     {  
@@ -50,6 +53,34 @@ public class PlayerController : MonoBehaviour
         if (collision.gameObject.tag == "Enemy")
         {
             TakeDamage(collision.gameObject.GetComponent<EnemyScript>().Damage);
+        }
+        if (collision.gameObject.tag == "NavMeshTrigger")
+        {
+            foreach (GameObject Enemy in Enemies)
+            {
+                if (Enemy.GetComponent<EnemyScript>().AiNavmeshCollier == collision)
+                {
+                    Enemy.GetComponent<EnemyScript>().NavMeshEnabled = true;
+                }
+            }
+        }
+        if (collision.gameObject.tag == "Key")
+        {
+            KeyCount ++;
+            Destroy(collision.gameObject);
+        }
+    }
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "NavMeshTrigger")
+        {
+            foreach (GameObject Enemy in Enemies)
+            {
+                if (Enemy.GetComponent<EnemyScript>().AiNavmeshCollier == collision)
+                {
+                    Enemy.GetComponent<EnemyScript>().NavMeshEnabled = false;
+                }
+            }
         }
     }
     private void OnTriggerStay2D(Collider2D collision)

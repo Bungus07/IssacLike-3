@@ -7,11 +7,13 @@ public class Door : MonoBehaviour
     private static bool isOnCooldown = false; // Shared cooldown to prevent re-entry
     private static Camera mainCamera; // Cache the main camera
     [SerializeField] private bool DoorIsLeftOrDown;
-
+    public bool IsLocked;
+    private GameObject Player;
     private void Awake()
     {
         if (mainCamera == null)
             mainCamera = Camera.main; // Get the main camera
+        Player = GameObject.Find("Player");
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -21,7 +23,36 @@ public class Door : MonoBehaviour
             StartCoroutine(TeleportPlayer(other.gameObject));
         }
     }
-
+    private void UnlockDoor()
+    {
+        Player.gameObject.GetComponent<PlayerController>().KeyCount--;
+        // This is where you change the sprite
+        gameObject.GetComponent<BoxCollider2D>().isTrigger = true;
+        gameObject.transform.GetChild(0).gameObject.SetActive(false); // if change sprite DELETE THIS
+        StartCoroutine(TeleportPlayer(Player));
+    }
+    private void Start()
+    {
+        if (IsLocked)
+        {
+            gameObject.GetComponent<BoxCollider2D>().isTrigger = false;
+        }
+    }
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        Debug.Log("DoorHasCollided");
+        if (other.gameObject.tag == "Player")
+        {
+            if (IsLocked)
+            {
+                Debug.Log("IsLocked");
+                if (other.gameObject.GetComponent<PlayerController>().KeyCount > 0)
+                {
+                    UnlockDoor();
+                }
+            }
+        }
+    }
     private IEnumerator TeleportPlayer(GameObject player)
     {
         if (linkedDoor != null)

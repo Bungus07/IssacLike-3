@@ -14,6 +14,9 @@ public class EnemyScript : MonoBehaviour
     private Animator BodyAnimator;
     public float EnemyHealth;
     public int Damage;
+    public Collider2D AiNavmeshCollier;
+    public bool NavMeshEnabled;
+    private Vector2 StartPosition;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,6 +26,7 @@ public class EnemyScript : MonoBehaviour
         Agent.updateRotation = false;
         Agent.updateUpAxis = false;
         BodyAnimator = gameObject.GetComponent<Animator>();
+        StartPosition = gameObject.transform.position;
     }
     public void TakeDamage(int Amount)
     {
@@ -36,7 +40,14 @@ public class EnemyScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Agent.SetDestination(Player.transform.position);
+        if (NavMeshEnabled) 
+        {
+            Agent.SetDestination(Player.transform.position);
+        }
+        else
+        {
+            Agent.SetDestination(StartPosition);
+        }
     }
     private void FixedUpdate()
     {
