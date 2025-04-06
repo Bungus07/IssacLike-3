@@ -9,6 +9,8 @@ TagManager:
   - Bomb
   - Door
   - CameraPoint
+  - NavMeshTrigger
+  - Key
   layers:
   - Default
   - TransparentFX

@@ -18,6 +18,8 @@ public class PlayerController : MonoBehaviour
     public GameObject Head;
     private GameObject[] Enemies;
     public int KeyCount = 0;
+    public int BombCount = 0;
+    public int CoinCount = 0;
 
     void Start()
     {
@@ -67,6 +69,16 @@ public class PlayerController : MonoBehaviour
         if (collision.gameObject.tag == "Key")
         {
             KeyCount ++;
+            Destroy(collision.gameObject);
+        }
+        if (collision.gameObject.tag == "Bomb")
+        {
+            BombCount++;
+            Destroy(collision.gameObject);
+        }
+        if (collision.gameObject.tag == "Coin")
+        {
+            BombCount++;
             Destroy(collision.gameObject);
         }
     }
