@@ -11,6 +11,7 @@ TagManager:
   - CameraPoint
   - NavMeshTrigger
   - Key
+  - Coin
   layers:
   - Default
   - TransparentFX

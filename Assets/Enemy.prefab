@@ -80,6 +80,8 @@ MonoBehaviour:
   MovementSpeed: 5
   EnemyHealth: 4
   Damage: 1
+  AiNavmeshCollier: {fileID: 0}
+  NavMeshEnabled: 0
 --- !u!195 &3750608193927455085
 NavMeshAgent:
   m_ObjectHideFlags: 0

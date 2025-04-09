@@ -20,6 +20,7 @@ public class PlayerController : MonoBehaviour
     public int KeyCount = 0;
     public int BombCount = 0;
     public int CoinCount = 0;
+    public GameObject Floor;
 
     void Start()
     {
@@ -58,11 +59,16 @@ public class PlayerController : MonoBehaviour
         }
         if (collision.gameObject.tag == "NavMeshTrigger")
         {
-            foreach (GameObject Enemy in Enemies)
+            Floor = collision.gameObject;
+            
+            if (Enemies.Length != 0)
             {
-                if (Enemy.GetComponent<EnemyScript>().AiNavmeshCollier == collision)
+                foreach (GameObject Enemy in Enemies)
                 {
-                    Enemy.GetComponent<EnemyScript>().NavMeshEnabled = true;
+                    if (Enemy.GetComponent<EnemyScript>().AiNavmeshCollier == collision)
+                    {
+                        Enemy.GetComponent<EnemyScript>().NavMeshEnabled = true;
+                    }
                 }
             }
         }
@@ -78,7 +84,7 @@ public class PlayerController : MonoBehaviour
         }
         if (collision.gameObject.tag == "Coin")
         {
-            BombCount++;
+            CoinCount++;
             Destroy(collision.gameObject);
         }
     }
@@ -86,11 +92,15 @@ public class PlayerController : MonoBehaviour
     {
         if (collision.gameObject.tag == "NavMeshTrigger")
         {
-            foreach (GameObject Enemy in Enemies)
+            
+            if (Enemies.Length != 0)
             {
-                if (Enemy.GetComponent<EnemyScript>().AiNavmeshCollier == collision)
+                foreach (GameObject Enemy in Enemies)
                 {
-                    Enemy.GetComponent<EnemyScript>().NavMeshEnabled = false;
+                    if (Enemy.GetComponent<EnemyScript>().AiNavmeshCollier == collision)
+                    {
+                        Enemy.GetComponent<EnemyScript>().NavMeshEnabled = false;
+                    }
                 }
             }
         }

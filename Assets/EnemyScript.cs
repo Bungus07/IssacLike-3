@@ -33,8 +33,13 @@ public class EnemyScript : MonoBehaviour
         EnemyHealth -= Amount;
         if (EnemyHealth <= 0)
         {
-            Destroy(gameObject);
+            EnemyDeath();
         }
+    }
+    public void EnemyDeath()
+    {
+        Player.GetComponent<PlayerController>().Floor.GetComponent<FloorScript>().RemoveEnemy(gameObject);
+        Destroy(gameObject);
     }
 
     // Update is called once per frame
