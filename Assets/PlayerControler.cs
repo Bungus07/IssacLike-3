@@ -87,6 +87,39 @@ public class PlayerController : MonoBehaviour
             CoinCount++;
             Destroy(collision.gameObject);
         }
+        if (collision.gameObject.tag == "RedHeart")
+        {
+            PlayerHealth++;
+            Destroy(collision.gameObject);
+        }
+        if (collision.gameObject.tag == "Buyable")
+        {
+            if(collision.gameObject.GetComponent<BuyableItems>().Price <= CoinCount)
+            {
+                CoinCount -= collision.gameObject.GetComponent<BuyableItems>().Price;
+                if (collision.gameObject.GetComponent<BuyableItems>().Item.ItemPrefab.gameObject.tag == "Key")
+                {
+                    KeyCount++;
+                    Destroy(collision.gameObject);
+                }
+                else if(collision.gameObject.GetComponent<BuyableItems>().Item.ItemPrefab.gameObject.tag == "Bomb")
+                {
+                    BombCount++;
+                    Destroy(collision.gameObject);
+                }
+                else if (collision.gameObject.GetComponent<BuyableItems>().Item.ItemPrefab.gameObject.tag == "RedHeart")
+                {
+                    PlayerHealth++;
+                    Destroy(collision.gameObject);
+                }
+            }
+            else
+            {
+                return;
+            }
+                
+        }
+
     }
     private void OnTriggerExit2D(Collider2D collision)
     {

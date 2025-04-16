@@ -12,6 +12,8 @@ TagManager:
   - NavMeshTrigger
   - Key
   - Coin
+  - RedHeart
+  - Buyable
   layers:
   - Default
   - TransparentFX
