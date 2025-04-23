@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour
     private Animator animatorshoot;
     private Animator AnimatorMove;
     public int PlayerHealth;
+    public int PlayerMaxHealth;
     public float InvincibilityTimer;
     public float InvincibilityTime;
     private bool InvincibilityTimerActive;
@@ -21,6 +22,9 @@ public class PlayerController : MonoBehaviour
     public int BombCount = 0;
     public int CoinCount = 0;
     public GameObject Floor;
+    public Projectile ProjectileScript;
+    public int DefaultDamage;
+    public int ExtraLife = 0;
 
     void Start()
     {
@@ -29,6 +33,8 @@ public class PlayerController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         Head.SetActive(true);
         Enemies = GameObject.FindGameObjectsWithTag("Enemy");
+        PlayerHealth = PlayerMaxHealth;
+        ProjectileScript.Damage = DefaultDamage;
     }
     void TakeDamage(int Damage)
     {  
@@ -44,11 +50,19 @@ public class PlayerController : MonoBehaviour
     }
     IEnumerator Death()
     {
-        AnimatorMove.SetBool("Dead", true);
-        Head.SetActive(false);
-        yield return new WaitForSeconds(0.3f);
-        Time.timeScale = 0;
-        CanvasMenu.GetComponent<Menu>().ShowRestartScreen();
+        if (ExtraLife > 0)
+        {
+            --ExtraLife;
+            PlayerHealth = PlayerMaxHealth;
+        }
+        else
+        {
+            AnimatorMove.SetBool("Dead", true);
+            Head.SetActive(false);
+            yield return new WaitForSeconds(0.3f);
+            Time.timeScale = 0;
+            CanvasMenu.GetComponent<Menu>().ShowRestartScreen();
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -89,7 +103,41 @@ public class PlayerController : MonoBehaviour
         }
         if (collision.gameObject.tag == "RedHeart")
         {
-            PlayerHealth++;
+            if (PlayerMaxHealth > PlayerHealth)
+            {
+                PlayerHealth++;
+                Destroy(collision.gameObject);
+            }
+        }
+        if (collision.gameObject.tag == "HealthUpItem")
+        {
+                PlayerMaxHealth++;
+                PlayerHealth++;
+                Destroy(collision.gameObject);
+        }
+        if (collision.gameObject.tag == "DamageUpItem")
+        {
+            ProjectileScript.Damage++; 
+            Destroy(collision.gameObject);
+        }
+        if (collision.gameObject.tag == "SpeedItem")
+        {
+            moveSpeed += 2;
+            Destroy(collision.gameObject);
+        }
+        if (collision.gameObject.tag == "BombBundleItem")
+        {
+            BombCount += 10;
+            Destroy(collision.gameObject);
+        }
+        if (collision.gameObject.tag == "CoinBundleItem")
+        {
+            CoinCount += 25;
+            Destroy(collision.gameObject);
+        }
+        if (collision.gameObject.tag == "RespawnItem")
+        {
+            ExtraLife++;
             Destroy(collision.gameObject);
         }
         if (collision.gameObject.tag == "Buyable")

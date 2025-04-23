@@ -6,6 +6,7 @@ public class Projectile : MonoBehaviour
 {
     public int Damage;
     private Shooting ShootingScript;
+    
     // Start is called before the first frame update
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -26,5 +27,6 @@ public class Projectile : MonoBehaviour
     private void Start()
     {
         ShootingScript = GameObject.Find("PlayerHead").GetComponent<Shooting>();
+        
     }
 }
