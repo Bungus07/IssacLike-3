@@ -5326,12 +5326,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 5
-  PlayerHealth: 100
+  PlayerHealth: 5
   PlayerMaxHealth: 5
   InvincibilityTimer: 0
   InvincibilityTime: 1
   CanvasMenu: {fileID: 1989692632}
   Head: {fileID: 1452353392}
+  Enemies: []
   KeyCount: 0
   BombCount: 0
   CoinCount: 0
@@ -5339,6 +5340,8 @@ MonoBehaviour:
   ProjectileScript: {fileID: 6343052651594717007, guid: 4026216ba1958c64ab1cf5812f9f69dd, type: 3}
   DefaultDamage: 2
   ExtraLife: 0
+  IsInvincible: 0
+  InvunrableTime: 1
 --- !u!50 &1010801591
 Rigidbody2D:
   serializedVersion: 4

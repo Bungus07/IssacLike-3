@@ -39,9 +39,13 @@ public class EnemyScript : MonoBehaviour
     public void EnemyDeath()
     {
         Player.GetComponent<PlayerController>().Floor.GetComponent<FloorScript>().RemoveEnemy(gameObject);
+        Player.GetComponent<PlayerController>().Enemies.Remove(gameObject);
         Destroy(gameObject);
     }
-
+    public void DebugTest()
+    {
+        Debug.Log("NavMeshEnabled =" + NavMeshEnabled);
+    }
     // Update is called once per frame
     void Update()
     {

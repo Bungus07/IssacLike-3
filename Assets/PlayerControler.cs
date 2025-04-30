@@ -17,7 +17,7 @@ public class PlayerController : MonoBehaviour
     private bool InvincibilityTimerActive;
     public GameObject CanvasMenu;
     public GameObject Head;
-    private GameObject[] Enemies;
+    public List<GameObject> Enemies = new List<GameObject>();
     public int KeyCount = 0;
     public int BombCount = 0;
     public int CoinCount = 0;
@@ -25,28 +25,37 @@ public class PlayerController : MonoBehaviour
     public Projectile ProjectileScript;
     public int DefaultDamage;
     public int ExtraLife = 0;
+    public bool IsInvincible;
+    public float InvunrableTime;
 
     void Start()
     {
         AnimatorMove = gameObject.GetComponent<Animator>();
         animatorshoot = gameObject.GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
+        foreach (GameObject Enemy in GameObject.FindGameObjectsWithTag("Enemy"))
+        {
+            Enemies.Add(Enemy);
+        }
         Head.SetActive(true);
-        Enemies = GameObject.FindGameObjectsWithTag("Enemy");
         PlayerHealth = PlayerMaxHealth;
         ProjectileScript.Damage = DefaultDamage;
     }
     void TakeDamage(int Damage)
-    {  
-        if (!InvincibilityTimerActive)
+    {
+        if (!IsInvincible)
         {
-            PlayerHealth -= Damage;
-            InvincibilityTimerActive = true;
-            if (PlayerHealth <= 0)
+            if (!InvincibilityTimerActive)
             {
-                StartCoroutine(Death());
+                PlayerHealth -= Damage;
+                InvincibilityTimerActive = true;
+                if (PlayerHealth <= 0)
+                {
+                    StartCoroutine(Death());
+                }
             }
         }
+        
     }
     IEnumerator Death()
     {
@@ -73,14 +82,16 @@ public class PlayerController : MonoBehaviour
         }
         if (collision.gameObject.tag == "NavMeshTrigger")
         {
+            Debug.Log("PlayerHasCollidedWithNavmesh");
             Floor = collision.gameObject;
             
-            if (Enemies.Length != 0)
+            if (Enemies.Count != 0)
             {
                 foreach (GameObject Enemy in Enemies)
                 {
                     if (Enemy.GetComponent<EnemyScript>().AiNavmeshCollier == collision)
                     {
+                        Enemy.GetComponent<EnemyScript>().DebugTest();
                         Enemy.GetComponent<EnemyScript>().NavMeshEnabled = true;
                     }
                 }
@@ -174,7 +185,7 @@ public class PlayerController : MonoBehaviour
         if (collision.gameObject.tag == "NavMeshTrigger")
         {
             
-            if (Enemies.Length != 0)
+            if (Enemies.Count != 0)
             {
                 foreach (GameObject Enemy in Enemies)
                 {

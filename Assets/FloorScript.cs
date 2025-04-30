@@ -14,7 +14,10 @@ public class FloorScript : MonoBehaviour
         
         if (collision.gameObject.tag == "Player")
         {
-            LockedDoor();
+            if (EnemiesOnFloor.Count != 0)
+            {
+                LockedDoor();
+            }
         }
     }
     public void RemoveEnemy(GameObject Enemy)

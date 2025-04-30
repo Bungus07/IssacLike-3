@@ -9,6 +9,7 @@ public class Door : MonoBehaviour
     [SerializeField] private bool DoorIsLeftOrDown;
     public bool IsLocked;
     private GameObject Player;
+    
     private void Awake()
     {
         if (mainCamera == null)
@@ -74,9 +75,12 @@ public class Door : MonoBehaviour
                 MoveCameraToRoom(linkedDoor.transform.position);
 
             // Wait for 1 second before allowing teleportation again
+            Player.GetComponent<PlayerController>().IsInvincible = true;
             yield return new WaitForSeconds(0.5f);
 
             isOnCooldown = false; // Cooldown over
+            yield return new WaitForSeconds(Player.GetComponent<PlayerController>().InvunrableTime);
+            Player.GetComponent<PlayerController>().IsInvincible = false;
         }
         else
         {
