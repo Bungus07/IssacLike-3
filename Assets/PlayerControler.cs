@@ -121,6 +121,7 @@ public class PlayerController : MonoBehaviour
             if (PlayerMaxHealth > PlayerHealth)
             {
                 PlayerHealth++;
+                HealhBarScript.UpdatePlayerHealth();
                 Destroy(collision.gameObject);
             }
         }
@@ -128,6 +129,7 @@ public class PlayerController : MonoBehaviour
         {
                 PlayerMaxHealth++;
                 PlayerHealth++;
+                HealhBarScript.UpdatePlayerHealth();
                 Destroy(collision.gameObject);
         }
         if (collision.gameObject.tag == "DamageUpItem")

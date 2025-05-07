@@ -18371,6 +18371,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: RedHeart
       objectReference: {fileID: 0}
+    - target: {fileID: 8542093813419195486, guid: bd01a7e84f5739846a4ef52848082209, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
