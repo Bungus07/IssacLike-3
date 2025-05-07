@@ -9,14 +9,15 @@ public class EnemyScript : MonoBehaviour
 {
     public float MovementSpeed;
     private GameObject Player;
-    private Rigidbody2D Rb;
-    private NavMeshAgent Agent;
+    public Rigidbody2D Rb;
+    public NavMeshAgent Agent;
     private Animator BodyAnimator;
     public float EnemyHealth;
     public int Damage;
     public Collider2D AiNavmeshCollier;
     public bool NavMeshEnabled;
     private Vector2 StartPosition;
+    public float knockbackAmount;
     // Start is called before the first frame update
     void Start()
     {
@@ -27,6 +28,7 @@ public class EnemyScript : MonoBehaviour
         Agent.updateUpAxis = false;
         BodyAnimator = gameObject.GetComponent<Animator>();
         StartPosition = gameObject.transform.position;
+        Agent.speed = MovementSpeed;
     }
     public void TakeDamage(int Amount)
     {
@@ -62,5 +64,6 @@ public class EnemyScript : MonoBehaviour
     {
         BodyAnimator.SetFloat("Hoz", Agent.velocity.x);
         BodyAnimator.SetFloat("Vert", Agent.velocity.y);
+        Debug.Log("AgentVelocityX = " + Agent.velocity.x + "AgentVelocityY = " + Agent.velocity.y);
     }
 }

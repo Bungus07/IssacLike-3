@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using NavMeshPlus.Extensions;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
@@ -27,6 +28,7 @@ public class PlayerController : MonoBehaviour
     public int ExtraLife = 0;
     public bool IsInvincible;
     public float InvunrableTime;
+    public HealhBar HealhBarScript;
 
     void Start()
     {
@@ -49,6 +51,7 @@ public class PlayerController : MonoBehaviour
             {
                 PlayerHealth -= Damage;
                 InvincibilityTimerActive = true;
+                HealhBarScript.UpdatePlayerHealth();
                 if (PlayerHealth <= 0)
                 {
                     StartCoroutine(Death());
@@ -78,6 +81,7 @@ public class PlayerController : MonoBehaviour
     {
         if (collision.gameObject.tag == "Enemy")
         {
+            rb.AddForce(new Vector2(collision.gameObject.GetComponent<EnemyScript>().Agent.velocity.x, collision.gameObject.GetComponent<EnemyScript>().Agent.velocity.y) * collision.gameObject.GetComponent<EnemyScript>().knockbackAmount, ForceMode2D.Force);
             TakeDamage(collision.gameObject.GetComponent<EnemyScript>().Damage);
         }
         if (collision.gameObject.tag == "NavMeshTrigger")
