@@ -18478,6 +18478,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1989692632}
     - target: {fileID: 7128011393239641637, guid: 596788172eca29741a13e450b60a75ae, type: 3}
+      propertyPath: ExplodingBomb
+      value: 
+      objectReference: {fileID: 3688593375510261939, guid: 2c87faa2eed60b04b8df9a46f459fe15, type: 3}
+    - target: {fileID: 7128011393239641637, guid: 596788172eca29741a13e450b60a75ae, type: 3}
       propertyPath: HealhBarScript
       value: 
       objectReference: {fileID: 168349017}

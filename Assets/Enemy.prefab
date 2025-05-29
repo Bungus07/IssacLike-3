@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3750608193927455085}
   - component: {fileID: 6951327363565277158}
   - component: {fileID: 1015099624678419613}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Enemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -78,10 +78,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MovementSpeed: 5
+  Rb: {fileID: 0}
+  Agent: {fileID: 0}
   EnemyHealth: 4
   Damage: 1
   AiNavmeshCollier: {fileID: 0}
   NavMeshEnabled: 0
+  knockbackAmount: 0
 --- !u!195 &3750608193927455085
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -170,7 +173,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4859214267869442501}
   - component: {fileID: 3051406730353775528}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PlayerBody
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -254,7 +257,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7424985479229969932}
   - component: {fileID: 1919306254773341097}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PlayerHead
   m_TagString: Untagged
   m_Icon: {fileID: 0}

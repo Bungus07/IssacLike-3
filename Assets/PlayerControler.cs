@@ -29,7 +29,7 @@ public class PlayerController : MonoBehaviour
     public bool IsInvincible;
     public float InvunrableTime;
     public HealhBar HealhBarScript;
-
+    public GameObject ExplodingBomb;
     void Start()
     {
         AnimatorMove = gameObject.GetComponent<Animator>();
@@ -115,6 +115,10 @@ public class PlayerController : MonoBehaviour
         {
             CoinCount++;
             Destroy(collision.gameObject);
+        }
+        if (collision.gameObject.tag == "ExplodingBomb")
+        {
+            TakeDamage(2);
         }
         if (collision.gameObject.tag == "RedHeart")
         {
@@ -203,6 +207,14 @@ public class PlayerController : MonoBehaviour
             }
         }
     }
+    private void PlaceBomb()
+    {
+        if (BombCount > 0)
+        {
+            Instantiate(ExplodingBomb, gameObject.transform.position, Quaternion.identity);
+            BombCount--;
+        }
+    } 
     private void OnTriggerStay2D(Collider2D collision)
     {
         // Debug.Log("PlayerIsStayingInTrigger");
@@ -225,6 +237,11 @@ public class PlayerController : MonoBehaviour
         animatorshoot.SetFloat("VertShoot", ShootInput.y);
         AnimatorMove.SetFloat("Hoz", moveInput.x);
         AnimatorMove.SetFloat("Vert", moveInput.y);
+
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            PlaceBomb();
+        }
 
         if (InvincibilityTimerActive == true)
         {

@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8107872172823935405}
   - component: {fileID: 4582838346076438516}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PlayerHead
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7079835940135805413}
   - component: {fileID: 1773454080545753526}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PlayerBody
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -182,7 +182,7 @@ GameObject:
   - component: {fileID: 3895296190880754283}
   - component: {fileID: 2053563890858606939}
   - component: {fileID: 4469152503319415132}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: EnemyZombie
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -246,10 +246,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MovementSpeed: 5
+  Rb: {fileID: 0}
+  Agent: {fileID: 0}
   EnemyHealth: 4
   Damage: 1
   AiNavmeshCollier: {fileID: 0}
   NavMeshEnabled: 0
+  knockbackAmount: 0
 --- !u!195 &3895296190880754283
 NavMeshAgent:
   m_ObjectHideFlags: 0
